@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* --- Colores --- */
+/* --- Tipografía --- */
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  background-color: #68150A;
+  color: #F9ECE5;
+}
+
+header, footer {
+  background-color: #68150A;
+  color: #F9ECE5;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: #F9ECE5;
+}
+
+.btn-contact {
+  background-color: #1F0062;
+  color: #F9ECE5;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* --- MEDIA QUERIES (Diseño Responsivo Avanzado) --- */
+/* Para pantallas medianas (Tablets) */
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .portfolio-item {
+    flex: 1 1 45%; /* Se acomodan de a dos por fila si hay espacio */
+    max-width: 100%;
+  }
+}
+/* Para pantallas chicas (Celulares) */
+@media (max-width: 480px) {
+  .portfolio-item {
+    flex: 1 1 100%; /* Ocupan todo el ancho disponible, uno abajo del otro */
+  }
+  .portfolio-item h2 {
+    font-size: 1.2rem;
+  }
+}
+.portfolio-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* Separación limpia entre tarjetas */
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  background-color: #0B78B3;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  /* flex: grow | shrink | basis */
+  flex: 1 1 300px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px); /* Efecto visual sutil al pasar el mouse */
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Mantiene la proporción de la imagen sin deformarla */
+  border-radius: 6px;
+}
+
+.portfolio-item h2 {
+  font-size: 1.4rem;
+  margin: 1rem 0 0.5rem 0;
+  color: #F9ECE5;
+}
+
+.portfolio-item p {
+  font-size: 0.95rem;
+  color: #F9ECE5;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón accesible y con buen contraste */
+.portfolio-item button {
+  margin-top: auto; /* Empuja el botón siempre al fondo de la tarjeta */
+  background-color: #D73220; /* Azul de alto contraste */
+  color: #F9ECE5;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.portfolio-item button:hover,
+.portfolio-item button:focus {
+  background-color: #D73220; /* Oscurece al pasar el cursor o hacer foco con teclado */
+  outline: 2px solid #000; /* Asegura indicador visual de foco para accesibilidad */
+}
+
+/* Secciones de contacto/extras */
+.portfolio-actions {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
