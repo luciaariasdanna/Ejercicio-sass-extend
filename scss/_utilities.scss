@@ -7,3 +7,16 @@ $c-boton2: #1F0062;
 /* --- Tipografía --- */
 $f-titulo: "Montserrat", sans-serif;
 $f-textos: "Nunito", sans-serif;
+
+@mixin button ($bg-color, $txt-color, $border, $padding, $ft-sz, $ft-wt, $b-radius, $cursor, $width, $trans){
+    background-color: $bg-color;
+    color: $txt-color;
+    border: $border;
+    padding: $padding;
+    font-size: $ft-sz;
+    font-weight: $ft-wt;
+    border-radius: $b-radius;
+    cursor: $cursor;
+    width: $width;
+    transition: $trans;
+}
