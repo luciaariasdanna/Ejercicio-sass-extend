@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* --- Colores --- */
 /* --- Tipografía --- */
+/* ---M-Q--- */
 body {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -26,36 +27,35 @@ h1 {
 .btn-contact {
   background-color: #1F0062;
   color: #F9ECE5;
-  padding: 0.75rem 2rem;
   border: none;
-  border-radius: 4px;
+  padding: 0.75rem 2rem;
   font-size: 1.1rem;
   font-weight: bold;
+  border-radius: 4px;
   cursor: pointer;
+  width: auto;
   transition: background-color 0.2s;
 }
 
-/* --- MEDIA QUERIES (Diseño Responsivo Avanzado) --- */
-/* Para pantallas medianas (Tablets) */
-@media (max-width: 768px) {
-  .portfolio-section {
-    padding: 1rem;
-    gap: 1rem;
-  }
-  .portfolio-item {
-    flex: 1 1 45%; /* Se acomodan de a dos por fila si hay espacio */
-    max-width: 100%;
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #0B78B3;
+}
+@media (min-width: 768px) {
+  .contenedor {
+    flex-direction: row;
+    padding: 2rem;
   }
 }
-/* Para pantallas chicas (Celulares) */
-@media (max-width: 480px) {
-  .portfolio-item {
-    flex: 1 1 100%; /* Ocupan todo el ancho disponible, uno abajo del otro */
-  }
-  .portfolio-item h2 {
-    font-size: 1.2rem;
+@media (min-width: 1024px) {
+  .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
+
 .portfolio-section {
   display: flex;
   flex-wrap: wrap;
@@ -108,7 +108,7 @@ h1 {
 /* Botón accesible y con buen contraste */
 .portfolio-item button {
   margin-top: auto; /* Empuja el botón siempre al fondo de la tarjeta */
-  background-color: #D73220; /* Azul de alto contraste */
+  background-color: #D73220;
   color: #F9ECE5;
   border: none;
   padding: 0.75rem 1.5rem;
