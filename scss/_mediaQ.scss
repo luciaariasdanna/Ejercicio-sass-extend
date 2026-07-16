@@ -1,23 +1,16 @@
-/* --- MEDIA QUERIES (Diseño Responsivo Avanzado) --- */
+@use "utilities" as *;
     
-/* Para pantallas medianas (Tablets) */
-@media (max-width: 768px) {
-    .portfolio-section {
+.contenedor {
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
-    gap: 1rem;
+    background-color: $c-fondo-items;
+    @include desde('tablet') {
+        flex-direction: row;
+        padding: 2rem;
     }
-    .portfolio-item {
-    flex: 1 1 45%; /* Se acomodan de a dos por fila si hay espacio */
-    max-width: 100%;
-    }
-}
-
-/* Para pantallas chicas (Celulares) */
-@media (max-width: 480px) {
-    .portfolio-item {
-    flex: 1 1 100%; /* Ocupan todo el ancho disponible, uno abajo del otro */
-    }
-    .portfolio-item h2 {
-    font-size: 1.2rem;
+    @include desde('desktop') {
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }

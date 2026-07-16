@@ -7,6 +7,10 @@ $c-boton2: #1F0062;
 /* --- Tipografía --- */
 $f-titulo: "Montserrat", sans-serif;
 $f-textos: "Nunito", sans-serif;
+/* ---M-Q--- */
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-large: 1440px;
 
 @mixin button ($bg-color, $txt-color, $border, $padding, $ft-sz, $ft-wt, $b-radius, $cursor, $width, $trans){
     background-color: $bg-color;
@@ -20,3 +24,19 @@ $f-textos: "Nunito", sans-serif;
     width: $width;
     transition: $trans;
 }
+
+@mixin desde($dispositivo) {
+    @if $dispositivo == 'tablet' {
+        @media (min-width: $bp-tablet){
+            @content;
+        }
+    }   @else if $dispositivo == 'desktop' {
+        @media (min-width: $bp-desktop){
+            @content;
+        }
+    }   @else if $dispositivo == 'large' {
+        @media (min-width: $bp-large){
+            @content;
+        }
+    }
+   }
