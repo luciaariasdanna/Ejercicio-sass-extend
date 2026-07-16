@@ -15,8 +15,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "build:sass": "sass scss/estilos.scss css/estilos.css",
-    "watch:sass": "sass --watch scss/estilos.scss css/estilos.css"
+    "build:sass": "sass ./scss/styles.scss ./css/styles.css",
+    "watch:sass": "sass --watch ./scss/styles.scss ./css/styles.css"
   },
     "devDependencies": {
     "sass": "^1.77.0"
